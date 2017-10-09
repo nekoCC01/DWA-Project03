@@ -11,6 +11,11 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+
+Route::get('/', 'QuoteController@index');
+Route::get('/get-quotes','QuoteController@getQuotes');
