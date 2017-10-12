@@ -3,7 +3,7 @@
 #
 # Customize the following for your project/server
 #
-docRoot="/var/www/html/foobooks"
+docRoot="/var/www/html/DWA-Project03"
 usernameServer="root@138.68.84.205"
 
 
