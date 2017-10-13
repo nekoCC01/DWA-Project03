@@ -17,5 +17,12 @@ Route::get('/', function () {
 });
 */
 
+
+/**
+ * Practice
+ */
+Route::any('/practice/{n?}', 'PracticeController@index');
+
+
 Route::get('/', 'QuoteController@index');
 Route::get('/get-quotes','QuoteController@getQuotes');
