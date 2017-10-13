@@ -17,6 +17,14 @@ Route::get('/', function () {
 });
 */
 
+Route::get('/env', function () {
+    dump(config('app.name'));
+    dump(config('app.env'));
+    dump(config('app.debug'));
+    dump(config('app.url'));
+});
+
+
 
 /**
  * Practice
