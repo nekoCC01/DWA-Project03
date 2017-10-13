@@ -3,9 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Debugbar;
 
 class PracticeController extends Controller
 {
+
+    public function practice2()
+    {
+        Debugbar::info('hello world');
+        Debugbar::error('Error!');
+        Debugbar::warning('Watch out…');
+        Debugbar::addMessage('Another message', 'mylabel');
+
+        return 'Practice 2';
+    }
 
     public function practice1()
     {
