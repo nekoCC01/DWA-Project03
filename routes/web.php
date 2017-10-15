@@ -31,6 +31,7 @@ Route::get('/env', function () {
  */
 Route::any('/practice/{n?}', 'PracticeController@index');
 
+Route::get('/', 'WelcomeController');
 
-Route::get('/', 'QuoteController@index');
-Route::get('/get-quotes','QuoteController@getQuotes');
+Route::get('/quote', 'QuoteController@index');
+Route::get('/quote/{quote}','QuoteController@getQuotes');

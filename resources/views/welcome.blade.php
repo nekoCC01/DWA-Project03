@@ -5,6 +5,6 @@
     <title>Project 03</title>
 </head>
 <body>
-<h1>DWA - Project 02</h1>
+<h1>DWA - Project 03</h1>
 </body>
 </html>

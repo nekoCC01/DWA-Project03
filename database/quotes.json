@@ -1,0 +1,40 @@
+{
+  "quotes": [
+    {
+      "quote": "The only true wisdom is in knowing you know nothing.",
+      "author": "Socrates",
+      "language": "English",
+      "img": "Socrates.jpg"
+    },
+    {
+      "quote": "It is not wisdom but Authority that makes a law.",
+      "author": "Thomas Hobbes",
+      "language": "English",
+      "img": "Hobbes.jpg"
+    },
+    {
+      "quote": "Life is really simple, but we insist on making it complicated.",
+      "author": "Confucius",
+      "language": "English",
+      "img": "Confucius.jpg"
+    },
+    {
+      "quote": "Ordnung ist die Verbindung des Vielen nach einer Regel.",
+      "author": "Immanuel Kant",
+      "language": "German",
+      "img": "Kant.jpg"
+    },
+    {
+      "quote": "Der Mensch sollte alle seine Werke zunächst einmal in seinem Herzen erwägen, bevor er sie ausführt.",
+      "author": "Hildegard von Bingen",
+      "language": "German",
+      "img": "vonBingen.jpg"
+    },
+    {
+      "quote": "La liberté de notre volonté se connaît sans preuve par la seule expérience que nous en avons.",
+      "author": "René Descartes",
+      "language": "French",
+      "img": "Descartes.jpg"
+    }
+  ]
+}
