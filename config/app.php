@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'DWA-Project03'),
+    'name' => env('APP_NAME', 'DailyQuotes'),
 
     /*
     |--------------------------------------------------------------------------

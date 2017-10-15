@@ -8,6 +8,8 @@ class QuoteController extends Controller
 {
     public function index() {
         return 'Show form to collect input from user.';
+
+
     }
 
     public function getQuotes() {
