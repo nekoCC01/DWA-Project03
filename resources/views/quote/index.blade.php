@@ -1,11 +1,12 @@
 @extends('layouts.master')
 
 @section('title')
-    All quotes
+    Daily Quotes - All quotes
 @endsection
 
 
 @section('content')
+
     <h1>All quotes</h1>
 
     @foreach($quotes as $quote)

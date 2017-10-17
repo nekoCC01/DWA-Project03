@@ -1,0 +1,33 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kaushan Script', cursive;
+    color: #b1cce7;
+    font-size: 70px;
+}
+
+header span:first-child {
+    margin-right: 10px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(45, 69, 113, 0), rgba(45, 69, 113, 0.6), rgba(45, 69, 113, 0));
+}
+
+main {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #b1cce7;
+}

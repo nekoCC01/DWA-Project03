@@ -1,15 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Project 03</title>
-</head>
-<body>
-<h1>DWA - Project 03</h1>
-</body>
+@extends('layouts.master')
 
-<ul>
-    <li><a href="/quote">Show all quotes</a></li>
-    <li><a href="/quote/random">Choose random quote</a></li>
-</ul>
-</html>
+@section('title')
+    Daily Quotes - Welcome
+@endsection
+
+@push('head')
+    <link href="/css/welcome.css" type='text/css' rel='stylesheet'>
+@endpush
+
+@section('content')
+
+    <ul>
+        <li><a href="/quote">Show all quotes</a></li>
+        <li><a href="/quote/random">Choose random quote</a></li>
+    </ul>
+
+@endsection
