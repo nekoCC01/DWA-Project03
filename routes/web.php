@@ -11,12 +11,20 @@
 |
 */
 
+
+//Entry Point, shows random quote with pre-defined filters (only with img), welcome header
+Route::get('/', 'WelcomeController');
+//Index, shows all quotes, offers a form for filtering
+Route::get('/quote', 'QuoteController@index');
+//Quote-View, shows one quote, with img (if available), either random or selected
+Route::get('/quote/{quote}', 'QuoteController@show');
+
+
 /*
 Route::get('/', function () {
     return view('welcome');
 });
 */
-
 Route::get('/env', function () {
     dump(config('app.name'));
     dump(config('app.env'));
@@ -24,14 +32,8 @@ Route::get('/env', function () {
     dump(config('app.url'));
 });
 
-
-
 /**
  * Practice
  */
 Route::any('/practice/{n?}', 'PracticeController@index');
 
-Route::get('/', 'WelcomeController');
-
-Route::get('/quote', 'QuoteController@index');
-Route::get('/quote/{quote}','QuoteController@getQuotes');

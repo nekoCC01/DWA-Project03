@@ -1,6 +1,5 @@
 @extends('layouts.master')
 
-
 @section('title')
     Show quote
 @endsection
@@ -9,7 +8,6 @@
 @push('head')
     <link href="/css/quote/show.css" type='text/css' rel='stylesheet'>
 @endpush
-
 
 @section('content')
     @if($quote)

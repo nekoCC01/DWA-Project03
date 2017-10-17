@@ -1,6 +1,4 @@
-
 @extends('layouts.master')
-
 
 @section('title')
     All quotes
