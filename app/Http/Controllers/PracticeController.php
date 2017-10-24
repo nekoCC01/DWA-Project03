@@ -4,9 +4,32 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Debugbar;
+use Wikidata\Wikidata;
+use League\Csv\Reader;
 
 class PracticeController extends Controller
 {
+
+    public function practice4()
+    {
+        $csvPath = database_path('quotes.csv');
+        $csv = Reader::createFromPath($csvPath, 'r');
+        $csv->setHeaderOffset(0);
+
+        $header = $csv->getHeader(); //returns the CSV header record
+        $records = $csv->getRecords(); //returns all the CSV records as an Iterator object
+
+        foreach ($records as $record){
+            dump($record);
+        }
+    }
+
+    public function practice3()
+    {
+        $wikidata = new Wikidata();
+        $results = $wikidata->search('London');
+        dump($results);
+    }
 
     public function practice2()
     {
