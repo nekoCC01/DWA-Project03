@@ -16,8 +16,10 @@
 Route::get('/', 'WelcomeController');
 //Index, shows all quotes, offers a form for filtering
 Route::get('/quote', 'QuoteController@index');
-//Quote-View, shows one quote, with img (if available), either random or selected
+//Quote-Single-View, shows one quote, with img (if available), either random or selected
 Route::get('/quote/{quote}', 'QuoteController@show');
+//Single-View with own name below Quote
+Route::get('/quote/pretend','QuoteController@pretend');
 
 
 /*
