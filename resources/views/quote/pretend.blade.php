@@ -1,7 +1,16 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: danielkasai1
- * Date: 26.10.17
- * Time: 17:29
- */
+@extends('layouts.master')
+
+@section('title')
+    Daily Quotes - Quote View
+@endsection
+
+
+@section('content')
+
+
+    Content
+
+    {{$quote}}
+
+
+@endsection

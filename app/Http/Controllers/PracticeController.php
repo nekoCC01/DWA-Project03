@@ -6,9 +6,33 @@ use Illuminate\Http\Request;
 use Debugbar;
 use Wikidata\Wikidata;
 use League\Csv\Reader;
+use League\Csv\Writer;
 
 class PracticeController extends Controller
 {
+
+    public function practice5()
+    {
+        $header  = ['first name', 'last name', 'email'];
+        $records = [
+                [1, 2, 3],
+                ['boon', 'biz', 'bazi'],
+                ['john', 'doe', 'john.doe@example.com'],
+        ];
+
+        $csvPath = database_path('filtered_quotes.csv');
+        $writer = Writer::createFromPath($csvPath, 'w+');
+
+        //insert the header
+        $writer->insertOne($header);
+
+        //insert all the records
+        $writer->insertAll($records);
+
+
+
+    }
+
 
     public function practice4()
     {

@@ -13,4 +13,10 @@
         <h1>No quote chosen</h1>
     @endif
 
+
+    <p>{{$index}}</p>
+
+    <a href="/quote/pretend/{{$index}}">Pretend</a>
+
+
 @endsection

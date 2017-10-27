@@ -29,15 +29,20 @@
         <input type="submit" value="Apply Filter">
     </form>
 
+    <p>{{old('language')}}</p>
+    <a href="/quote/random">Random Quote</a>
 
 
     <h1>All quotes</h1>
 
-    @foreach($quotes as $quote)
+    @foreach($quotes as $index => $quote)
         <div class="quote">
             <h3>{{$quote['Zitat']}}</h3>
             by {{$quote['Autor']}}
+            <p>{{$index}}</p>
+            <p>{{$loop->iteration}}</p>
         </div>
+        <a href="/quote/{{$loop->iteration}}">Link zu Show</a>
     @endforeach
 
 @endsection
