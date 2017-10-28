@@ -66,8 +66,10 @@ class QuoteController extends Controller
     //show one single quote, either random or selected
     public function show($quote)
     {
-        $filtered_quotes    = iterator_to_array($this->filtered_quotes);
+        $filtered_quotes = iterator_to_array($this->filtered_quotes);
         dump($filtered_quotes);
+        $img = array();
+        $img[0] = "http://via.placeholder.com/350x150";
 
         $output = '';
         if ($quote == 'random') {
@@ -75,7 +77,7 @@ class QuoteController extends Controller
             $random_quote_index = array_rand($filtered_quotes);
 
             $output = $filtered_quotes[$random_quote_index]['Zitat'];
-            $index = $random_quote_index;
+            $index  = $random_quote_index;
 
         } else {
 
@@ -83,10 +85,29 @@ class QuoteController extends Controller
             $index = $quote;
         }
 
+
+        $wikidata = new Wikidata();
+        dump($filtered_quotes[$index]['Wikidata-ID (Autor)']);
+        $entity = $wikidata->get($filtered_quotes[$index]['Wikidata-ID (Autor)']);
+        dump($entity);
+        if (in_array("image", $entity->properties)) {
+            $img = $entity->get("image");
+            dump($img);
+        }
+
+        /*
+        foreach ($properties as $property){
+            echo $property;
+            dump($entity->get($property));
+        }
+        */
+
+
         return view('quote.show')->with(
                 [
                         'quote' => $output,
-                        'index' => $index
+                        'index' => $index,
+                        'img' => $img[0]
                 ]
         );
     }
@@ -96,8 +117,8 @@ class QuoteController extends Controller
     {
         $username = $request->input('username');
 
-        $quote_index = $request->input('quote_id');
-        $filtered_quotes    = iterator_to_array($this->filtered_quotes);
+        $quote_index     = $request->input('quote_id');
+        $filtered_quotes = iterator_to_array($this->filtered_quotes);
         dump($filtered_quotes[$quote_index]);
 
         return view('quote.pretend')->with(['username' => $username]);

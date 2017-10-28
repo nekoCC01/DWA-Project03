@@ -24,8 +24,7 @@
 
     {{-- <a href="/quote/pretend/{{$index}}">Pretend</a>  --}}
 
-
-
+    <img src="{{$img}}" alt="">
 
 
 @endsection
