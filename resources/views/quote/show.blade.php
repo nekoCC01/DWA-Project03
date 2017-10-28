@@ -16,7 +16,16 @@
 
     <p>{{$index}}</p>
 
-    <a href="/quote/pretend/{{$index}}">Pretend</a>
+    <form action="/quote/pretend" method="get">
+        <input type="text" name="username">
+        <input type="hidden" name="quote_id" value="{{$index}}">
+        <input type="submit">
+    </form>
+
+    {{-- <a href="/quote/pretend/{{$index}}">Pretend</a>  --}}
+
+
+
 
 
 @endsection

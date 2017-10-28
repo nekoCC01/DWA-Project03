@@ -10,7 +10,11 @@
 
     Content
 
-    {{$quote}}
+
+
+    <h3> {{ $username  }} </h3>
+
+    {{-- {{$quote}}   --}}
 
 
 @endsection

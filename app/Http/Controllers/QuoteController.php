@@ -92,12 +92,15 @@ class QuoteController extends Controller
     }
 
 
-    public function pretend($quote)
+    public function pretend(Request $request)
     {
-        $filtered_quotes    = iterator_to_array($this->filtered_quotes);
-        dump($filtered_quotes[$quote]);
+        $username = $request->input('username');
 
-        return view('quote.pretend')->with(['quote' => $quote]);
+        $quote_index = $request->input('quote_id');
+        $filtered_quotes    = iterator_to_array($this->filtered_quotes);
+        dump($filtered_quotes[$quote_index]);
+
+        return view('quote.pretend')->with(['username' => $username]);
     }
 
 }
