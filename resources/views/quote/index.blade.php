@@ -25,6 +25,7 @@
             <legend>Category</legend>
 
             <input type="checkbox" name="category[]" value="Philosophy">Philosophy <br>
+            <input type="checkbox" name="category[]" value="Daily Inspiration">Daily Inspiration <br>
             <input type="checkbox" name="category[]" value="Politics">Politics <br>
             <input type="checkbox" name="category[]" value="Biographical">Biographical <br>
 

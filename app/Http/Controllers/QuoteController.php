@@ -87,18 +87,8 @@ class QuoteController extends Controller
         $quote  = $filtered_quotes[$index]['Zitat'];
         $author = $filtered_quotes[$index]['Autor'];
 
-        //default img
-        $img    = array();
-        $img[0] = "http://via.placeholder.com/300x150";
+        $img = $this->getWikidataImg($index, $filtered_quotes);
 
-        //img from wikidata, if available
-        if ($filtered_quotes[$index]['Wikidata-ID (Autor)'] != '') {
-            $wikidata = new Wikidata();
-            $entity   = $wikidata->get($filtered_quotes[$index]['Wikidata-ID (Autor)']);
-            if (in_array("image", $entity->properties)) {
-                $img = $entity->get("image");
-            }
-        }
 
         return view('quote.show')->with(
                 [
@@ -115,18 +105,40 @@ class QuoteController extends Controller
     {
         //get form data: username and hidden quote-index
         $username = $request->input('username');
+        $username = preg_replace("/\s+/", "<br>", $username);
         $index    = $request->input('quote_index');
 
         //get quote by index
         $filtered_quotes = iterator_to_array($this->filtered_quotes);
         $quote           = $filtered_quotes[$index]['Zitat'];
 
+        $img = $this->getWikidataImg($index, $filtered_quotes);
+
         return view('quote.pretend')->with(
                 [
                         'username' => $username,
-                        'quote'    => $quote
+                        'quote'    => $quote,
+                        'img'      => $img[0]
                 ]
         );
     }
+
+    private function getWikidataImg($index, $filtered_quotes)
+    {
+        //fallback img
+        $img    = array();
+        $img[0] = "http://via.placeholder.com/300x150";
+
+        //img from wikidata, if available
+        if ($filtered_quotes[$index]['Wikidata-ID (Autor)'] != '') {
+            $wikidata = new Wikidata();
+            $entity   = $wikidata->get($filtered_quotes[$index]['Wikidata-ID (Autor)']);
+            if (in_array("image", $entity->properties)) {
+                $img = $entity->get("image");
+            }
+        }
+        return $img;
+    }
+
 
 }
