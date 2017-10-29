@@ -19,7 +19,7 @@ Route::get('/quote', 'QuoteController@index');
 //Single-View with own name below Quote
 Route::get('/quote/pretend','QuoteController@pretend');
 //Quote-Single-View, shows one quote, with img (if available), either random or selected
-Route::get('/quote/{quote}', 'QuoteController@show');
+Route::get('/quote/{quote_index}', 'QuoteController@show');
 
 
 

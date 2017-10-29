@@ -15,7 +15,7 @@
 <body>
 
 <header>
-    <span>Daily</span><img src="img/DenkerProfil.jpg" alt=""><span>Quotes</span>
+    <span>Daily</span><img src="/img/DenkerProfil.jpg" alt=""><span>Quotes</span>
 </header>
 <hr>
 <main>

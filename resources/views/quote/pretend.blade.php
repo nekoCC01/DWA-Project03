@@ -7,14 +7,12 @@
 
 @section('content')
 
+    <h3>{{$quote}}</h3>
+    <p> by {{ $username  }} </p>
 
-    Content
 
-
-
-    <h3> {{ $username  }} </h3>
-
-    {{-- {{$quote}}   --}}
-
+    <img src="/img/quotepretender.png" alt="">
+    
+    
 
 @endsection

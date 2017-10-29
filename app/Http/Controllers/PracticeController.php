@@ -11,6 +11,22 @@ use League\Csv\Writer;
 class PracticeController extends Controller
 {
 
+
+    public function practice6()
+    {
+
+        $csvPath = database_path('quotes.csv');
+        $csv     = Reader::createFromPath($csvPath, 'r');
+        $csv->setHeaderOffset(0);
+        $filtered_quotes = $csv->getRecords();
+
+        $index = 32;
+        $filtered_quotes = iterator_to_array($filtered_quotes);
+        $author = $filtered_quotes[$index]['Autor'];
+        dump($filtered_quotes[$index]['Wikidata-ID (Autor)']);
+
+    }
+
     public function practice5()
     {
         $header  = ['first name', 'last name', 'email'];
@@ -28,8 +44,6 @@ class PracticeController extends Controller
 
         //insert all the records
         $writer->insertAll($records);
-
-
 
     }
 

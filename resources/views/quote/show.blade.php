@@ -4,27 +4,26 @@
     Daily Quotes - Quote View
 @endsection
 
+@push('head')
+    <link rel="stylesheet" href="/css/show.css" type="text/css">
+@endpush
 
 @section('content')
 
-    @if($quote)
-        <h1>Show quote: {{ $quote }}</h1>
-    @else
-        <h1>No quote chosen</h1>
-    @endif
+    <img id="author" src="{{$img}}" alt="">
 
+    <h2>{{ $quote }}</h2>
+    by {{$author}}
 
-    <p>{{$index}}</p>
 
     <form action="/quote/pretend" method="get">
+        <p>Put your own name below the quote:</p>
         <input type="text" name="username">
-        <input type="hidden" name="quote_id" value="{{$index}}">
+        <input type="hidden" name="quote_index" value="{{$index}}">
         <input type="submit">
     </form>
 
     {{-- <a href="/quote/pretend/{{$index}}">Pretend</a>  --}}
-
-    <img src="{{$img}}" alt="">
 
 
 @endsection
