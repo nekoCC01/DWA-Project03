@@ -16,18 +16,18 @@
         <fieldset>
             <legend>Language</legend>
 
-            <input type="checkbox" name="language[]" value="EN">English <br>
-            <input type="checkbox" name="language[]" value="DE">German <br>
-            <input type="checkbox" name="language[]" value="FR">French <br>
+            <input type="checkbox" name="language[]" value="EN" {{ in_array('EN', $languages) ? 'checked' : '' }} >English <br>
+            <input type="checkbox" name="language[]" value="DE" {{ in_array('DE', $languages) ? 'checked' : '' }} >German <br>
+            <input type="checkbox" name="language[]" value="FR" {{ in_array('FR', $languages) ? 'checked' : '' }} >French <br>
 
         </fieldset>
         <fieldset>
             <legend>Category</legend>
 
-            <input type="checkbox" name="category[]" value="Philosophy">Philosophy <br>
-            <input type="checkbox" name="category[]" value="Daily Inspiration">Daily Inspiration <br>
-            <input type="checkbox" name="category[]" value="Politics">Politics <br>
-            <input type="checkbox" name="category[]" value="Biographical">Biographical <br>
+            <input type="checkbox" name="category[]" value="Philosophy" {{ in_array('Philosophy', $categories) ? 'checked' : '' }} >Philosophy <br>
+            <input type="checkbox" name="category[]" value="Daily Inspiration" {{ in_array('Daily Inspiration', $categories) ? 'checked' : '' }} >Daily Inspiration <br>
+            <input type="checkbox" name="category[]" value="Politics" {{ in_array('Politics', $categories) ? 'checked' : '' }}>Politics <br>
+            <input type="checkbox" name="category[]" value="Biographical" {{ in_array('Biographical', $categories) ? 'checked' : '' }}>Biographical <br>
 
         </fieldset>
         <input type="submit" value="Apply Filter">

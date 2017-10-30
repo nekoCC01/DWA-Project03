@@ -40,6 +40,7 @@ class QuoteController extends Controller
         //start with all quotes
         $filtered_quotes = iterator_to_array($this->all_quotes);
 
+        $languages['language'] = array();
         //filter by language
         if ($request->has('language')) {
             $languages = $request->only('language');
@@ -49,6 +50,8 @@ class QuoteController extends Controller
                 }
             }
         }
+
+        $categories['category'] = array();
         //filter by category
         if ($request->has('category')) {
             $categories = $request->only('category');
@@ -66,7 +69,9 @@ class QuoteController extends Controller
         $writer->insertAll($filtered_quotes);
 
         return view('quote.index')->with([
-                'quotes' => $filtered_quotes
+                'quotes'     => $filtered_quotes,
+                'languages'  => $languages['language'],
+                'categories' => $categories['category']
         ]);
     }
 
@@ -103,10 +108,17 @@ class QuoteController extends Controller
 
     public function pretend(Request $request)
     {
+
+        $this->validate($request, [
+                'username' => 'required|min:3|alpha_spaces',
+        ]);
+
         //get form data: username and hidden quote-index
         $username = $request->input('username');
-        $username = preg_replace("/\s+/", "<br>", $username);
-        $index    = $request->input('quote_index');
+        //$username = preg_replace("/\s+/", "<br>", $username);
+        $username = preg_split("/\s+/", $username);
+
+        $index = $request->input('quote_index');
 
         //get quote by index
         $filtered_quotes = iterator_to_array($this->filtered_quotes);
@@ -137,6 +149,7 @@ class QuoteController extends Controller
                 $img = $entity->get("image");
             }
         }
+
         return $img;
     }
 
