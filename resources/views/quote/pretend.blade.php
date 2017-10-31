@@ -30,7 +30,7 @@
     </div>
 
 
-    <button><a class="button" href="javascript:history.back()">Back</a></button>
+    <a class="button" href="javascript:history.back()">Back</a>
 
 
 @endsection

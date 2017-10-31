@@ -43,7 +43,7 @@
     </form>
 
 
-    <button><a class="button" href="javascript:history.back()">Back</a></button>
-    <button><a class="button" href="/quote/random">Another random quote</a></button>
+    <a class="button" href="javascript:history.back()">Back</a>
+    <a class="button" href="/quote/random">Another random quote</a>
 
 @endsection

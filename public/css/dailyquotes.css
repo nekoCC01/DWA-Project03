@@ -2,6 +2,10 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+main {
+    text-align: center;
+}
+
 header {
     display: flex;
     justify-content: center;
@@ -36,18 +40,19 @@ footer {
     color: #b1cce7;
 }
 
-button {
+a.button {
+    text-decoration: none;
+    color: white;
     display: inline-block;
     margin-top: 20px;
     background-color: #5881A9;
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
-}
-
-a.button {
-    text-decoration: none;
-    color: white;
+    border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
 }
 
 /*

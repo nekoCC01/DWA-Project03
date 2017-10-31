@@ -8,7 +8,6 @@
     <link href="/css/welcome.css" type='text/css' rel='stylesheet'>
 @endpush
 
-
 @section('content')
 
     <div id="quote_presentation">
@@ -19,9 +18,7 @@
 
     </div>
 
-
-    <button><a class="button" href="/quote">Show all quotes</a></button>
-    <button><a class="button" href="/quote/random">Random Quote </a></button>
-
+    <a class="button" href="/quote">Show all quotes</a>
+    <a class="button" href="/quote/random">Random Quote </a>
 
 @endsection

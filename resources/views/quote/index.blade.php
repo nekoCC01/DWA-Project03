@@ -58,9 +58,7 @@
 
     </form>
 
-
-    <button><a class="button" href="/quote/random">Random Quote </a></button>
-
+    <a class="button" href="/quote/random">Random Quote </a>
 
 
     <h1>All quotes</h1>
