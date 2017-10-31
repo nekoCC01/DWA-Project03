@@ -22,10 +22,12 @@
                        id="EN" {{ in_array('EN', $languages) ? 'checked' : '' }} >
                 <label for="EN">English</label>
                 <br>
-                <input type="checkbox" name="language[]" value="DE" {{ in_array('DE', $languages) ? 'checked' : '' }} >
+                <input type="checkbox" name="language[]" value="DE"
+                       id="DE" {{ in_array('DE', $languages) ? 'checked' : '' }} >
                 <label for="DE">German</label>
                 <br>
-                <input type="checkbox" name="language[]" value="FR" {{ in_array('FR', $languages) ? 'checked' : '' }} >
+                <input type="checkbox" name="language[]" value="FR"
+                       id="FR"{{ in_array('FR', $languages) ? 'checked' : '' }} >
                 <label for="FR">French</label>
                 <br>
             </fieldset>
@@ -38,8 +40,8 @@
                 <label for="Philosophy">Philosophy</label>
                 <br>
                 <input type="checkbox" name="category[]" value="Daily Inspiration"
-                       id="Daily Inspiration" {{ in_array('Daily Inspiration', $categories) ? 'checked' : '' }} >
-                <label for="Daily Inspiration">Daily Inspiration</label>
+                       id="Daily_Inspiration" {{ in_array('Daily Inspiration', $categories) ? 'checked' : '' }} >
+                <label for="Daily_Inspiration">Daily Inspiration</label>
                 <br>
                 <input type="checkbox" name="category[]" value="Politics"
                        id="Politics" {{ in_array('Politics', $categories) ? 'checked' : '' }}>
@@ -56,9 +58,9 @@
 
     </form>
 
-    <a class="button" href="/quote/random">
-        <button>Random Quote</button>
-    </a>
+
+    <button><a class="button" href="/quote/random">Random Quote </a></button>
+
 
 
     <h1>All quotes</h1>

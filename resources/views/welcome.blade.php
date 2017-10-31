@@ -19,11 +19,9 @@
 
     </div>
 
-    <a class="button" href="/quote">
-        <button>Show all quotes</button>
-    </a>
-    <a class="button" href="/quote/random">
-        <button>Random Quote</button>
-    </a>
+
+    <button><a class="button" href="/quote">Show all quotes</a></button>
+    <button><a class="button" href="/quote/random">Random Quote </a></button>
+
 
 @endsection

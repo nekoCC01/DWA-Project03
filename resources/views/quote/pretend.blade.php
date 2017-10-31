@@ -29,8 +29,8 @@
 
     </div>
 
-    <a class="button" href="javascript:history.back()">
-        <button>Back</button>
-    </a>
+
+    <button><a class="button" href="javascript:history.back()">Back</a></button>
+
 
 @endsection
