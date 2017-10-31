@@ -19,14 +19,12 @@
     <p id="quote">{{$quote}}</p>
     <div id="img_container">
         <img src="/img/{{$img_pretender}}" alt="">
-        {{-- <p id="username">{!! $username !!} </p> --}}
         <p id="username">
             by<br>
             @foreach ($username as $name_part)
                 {{$name_part}}<br>
             @endforeach
         </p>
-        {{-- <div id="author_img" style="background-image: url('{{$img}}');"></div> --}}
         <div id="author_img"></div>
 
     </div>

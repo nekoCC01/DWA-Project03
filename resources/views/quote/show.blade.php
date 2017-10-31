@@ -43,11 +43,8 @@
     </form>
 
     <a class="button" href="javascript:history.back()">
-        <button>Show all quotes</button>
+        <button>Back</button>
     </a>
-    <a class="button" href="/quote/random"><button>Random Quote</button></a>
-
-    {{-- <a href="/quote/pretend/{{$index}}">Pretend</a>  --}}
-
+    <a class="button" href="/quote/random"><button>Another random quote</button></a>
 
 @endsection
