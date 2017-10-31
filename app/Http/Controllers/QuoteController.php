@@ -113,9 +113,9 @@ class QuoteController extends Controller
                 'username' => 'required|min:3|alpha_spaces',
         ]);
 
-        //get form data: username and hidden quote-index
+        //get form data: username, gender and hidden quote-index
         $username = $request->input('username');
-        //$username = preg_replace("/\s+/", "<br>", $username);
+        $gender   = $request->input('gender');
         $username = preg_split("/\s+/", $username);
 
         $index = $request->input('quote_index');
@@ -124,13 +124,19 @@ class QuoteController extends Controller
         $filtered_quotes = iterator_to_array($this->filtered_quotes);
         $quote           = $filtered_quotes[$index]['Zitat'];
 
-        $img = $this->getWikidataImg($index, $filtered_quotes);
+        //get Wikidata-img of the author
+        $img_author = $this->getWikidataImg($index, $filtered_quotes);
+
+        //build pretender-img url
+        $img_pretender = 'quote_pretender_' . $gender . '.png';
 
         return view('quote.pretend')->with(
                 [
-                        'username' => $username,
-                        'quote'    => $quote,
-                        'img'      => $img[0]
+                        'username'      => $username,
+                        'quote'         => $quote,
+                        'img_author'    => $img_author[0],
+                        'img_pretender' => $img_pretender
+
                 ]
         );
     }
@@ -139,7 +145,7 @@ class QuoteController extends Controller
     {
         //fallback img
         $img    = array();
-        $img[0] = "http://via.placeholder.com/300x150";
+        $img[0] = "/img/ksenia-makagonova-229007.jpg";
 
         //img from wikidata, if available
         if ($filtered_quotes[$index]['Wikidata-ID (Autor)'] != '') {

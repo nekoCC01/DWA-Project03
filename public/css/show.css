@@ -1,14 +1,38 @@
 
-body {
+main {
     text-align: center;
 }
 
-img#author {
+p#quote {
+    font-size: 24px;
+}
+
+p#author_name {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+p.error {
+    font-size: 12px;
+    color: #DCB48C;
+}
+
+img#author_img {
     margin: 0 auto;
     display: block;
     width: 300px;
 }
 
-form {
-    margin-top: 50px;
+fieldset {
+    padding: 20px 20px 30px 40px;
+    border-radius: 4px;
+    border: 1px solid #5881A9;
+}
+
+label span {
+    font-size: 10px;
+}
+
+input[type=text] {
+    width: 240px;
 }

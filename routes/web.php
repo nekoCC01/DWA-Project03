@@ -12,7 +12,7 @@
 */
 
 
-//Entry Point, shows random quote with pre-defined filters (only with img), welcome header
+//Entry Point, welcome header
 Route::get('/', 'WelcomeController');
 //Index, shows all quotes, offers a form for filtering
 Route::get('/quote', 'QuoteController@index');

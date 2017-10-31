@@ -11,6 +11,10 @@ header {
     font-size: 70px;
 }
 
+body > a {
+    text-decoration: none;
+}
+
 header span:first-child {
     margin-right: 10px;
 }
@@ -30,4 +34,44 @@ footer {
     margin-top: 50px;
     text-align: center;
     color: #b1cce7;
+}
+
+button {
+    display: inline-block;
+    margin-top: 20px;
+
+    color: white;
+    background-color: #5881A9;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+a.button {
+    text-decoration: none;
+}
+
+/*
+Form styling
+ */
+
+form {
+    margin-top: 50px;
+    width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+legend {
+    color: #5881A9;
+    font-size: 18px;
+}
+
+input[type=submit] {
+    color: #5881A9;
+    cursor: pointer;
+}
+
+label {
+    font-size: 14px;
 }

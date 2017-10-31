@@ -1,4 +1,26 @@
+
+.quote p {
+    font-size: 20px;
+}
+
+fieldset {
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #5881A9;
+}
+
+fieldset fieldset {
+    padding: 10px 20px 20px 20px;
+    border: 1px solid rgba(88, 129, 169, 0.6);
+}
+
 input[type="submit"] {
     margin: 0 auto;
     display: block;
+    margin-top: 20px;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
 }

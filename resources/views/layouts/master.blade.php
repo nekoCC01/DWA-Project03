@@ -14,9 +14,13 @@
 </head>
 <body>
 
-<header>
-    <span>Daily</span><img src="/img/DenkerProfil.jpg" alt=""><span>Quotes</span>
-</header>
+<a href="/">
+    <header>
+
+        <span>Daily</span><img src="/img/DenkerProfil.jpg" alt=""><span>Quotes</span>
+
+    </header>
+</a>
 <hr>
 <main>
     @yield('content')

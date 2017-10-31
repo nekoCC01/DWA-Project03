@@ -3,6 +3,25 @@ main {
     text-align: center;
 }
 
+#quote_presentation {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("/img/roman-kraft-136249.jpg");
+    /* Set a specific height */
+    min-height: 220px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 15em black;
+
+    padding: 20px 50px;
+}
+
 ul {
     list-style: none;
     margin-top: 40px;
